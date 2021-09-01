@@ -2,7 +2,6 @@ package frc.robot;
 
 //import edu.wpi.first.wpilibj.XboxController;
 //import edu.wpi.first.wpilibj.GenericHID.Hand;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX; //imports the correct victor API
@@ -29,10 +28,6 @@ public class Robot extends TimedRobot
    //private final XboxController m_driverController = new XboxController(0);
     //temp
 
-   //joystick button setup VVV
-   //Trigger for shooting
-   //5 and 3 for intake controlles
-   //11 and 12 for cameras
 
    //sets up the ports of motors
    private static final int kMotorPortLeftFront = 10;
