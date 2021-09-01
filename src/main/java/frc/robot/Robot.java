@@ -61,6 +61,7 @@ public class Robot extends TimedRobot
    Compressor compressor = new Compressor(0);
    private Solenoid s1 , s2, s3, s4; 
 
+// im joto
 
 
   private final Timer m_timer = new Timer(); //identifys a timer 
