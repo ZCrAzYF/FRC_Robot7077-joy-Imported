@@ -21,13 +21,10 @@ import edu.wpi.first.wpilibj.Solenoid;
 // the robot class create all the parts of the robot, ie the motors and sensors
 public class Robot extends TimedRobot 
 {
-  // private MecanumDrive m_robotDrive;
+
 
    
   private Joystick m_stick;
-   //private final XboxController m_driverController = new XboxController(0);
-    //temp
-
 
    //sets up the ports of motors
    private static final int kMotorPortLeftFront = 10;
@@ -80,7 +77,7 @@ public void robotInit(){
     server = CameraServer.getInstance().getServer();
     
     s1 = new Solenoid(6);
-    s2 = new Solenoid(7);
+    s2 = new Solenoid(0); //logic error port is incorrectS
     s3 = new Solenoid(0);
     s4 = new Solenoid(1);
   
@@ -139,17 +136,7 @@ public void autonomousPeriodic() {
     m_drive.arcadeDrive(m_stick.getX(), m_stick.getY());
     //m_drive.arcadeDrive(m_driverController.getY(Hand.kLeft), m_driverController.getY(Hand.kRight));
 
-    //compressor.start();
-
-    if(m_stick.getRawButtonPressed(11))
-    {
-      compressor.stop();
-    }
-
-    if(m_stick.getRawButtonPressed(10))
-    {
-      compressor.start();
-    }
+    compressor.start();
 
         if (m_stick.getRawButtonPressed(6)) 
         {
