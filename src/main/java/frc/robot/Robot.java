@@ -76,10 +76,10 @@ public void robotInit(){
    shooter = CameraServer.getInstance().startAutomaticCapture();
     server = CameraServer.getInstance().getServer();
     
-    s1 = new Solenoid(6);
-    s2 = new Solenoid(0); //logic error port is incorrectS
-    s3 = new Solenoid(0);
-    s4 = new Solenoid(1);
+    s1 = new Solenoid(0);
+    s2 = new Solenoid(1); //logic error port is incorrectS
+    s3 = new Solenoid(2);
+    s4 = new Solenoid(3);
   
     m_Shooter.setInverted(true);
     m_RightFront.setInverted(true);
@@ -178,28 +178,29 @@ public void autonomousPeriodic() {
      s2.set(false);
    }
 
-   if (m_stick.getRawButtonPressed(6))
+   if (m_stick.getRawButtonPressed(10))
    {
      s3.set(true);
    }
 
-   else if (m_stick.getRawButtonReleased(6))
+   else if (m_stick.getRawButtonReleased(10))
    {
      s3.set(false);
    }
 
-   if(m_stick.getRawButtonPressed(7))
+   if(m_stick.getRawButtonPressed(11))
    {
      s4.set(true);
    }
 
-   else if (m_stick.getRawButtonReleased(7))
+   else if (m_stick.getRawButtonReleased(11))
    {
      s4.set(false);
    }
 
-  }
- 
+
+}
+
 
 @Override
 public void testPeriodic() {
